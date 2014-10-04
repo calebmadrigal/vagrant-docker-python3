@@ -28,9 +28,11 @@ RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/ss
 RUN sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 EXPOSE 22
 
+# Make /vagrant the default directory
+ADD .bash_profile /home/vagrant/.bash_profile
+
 # Dev tools
-RUN apt-get install -y git
-RUN apt-get install -y vim
+#RUN apt-get install -y vim
 
 # Python stuff
 ADD requirements.txt /root/requirements.txt

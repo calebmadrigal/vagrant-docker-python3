@@ -1,2 +1,2 @@
+# Example pip requirements.txt file; Replace with your actual dependencies.
 aiohttp
-beautifulsoup4
